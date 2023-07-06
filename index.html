@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Etch-a-Sketch</title>
+     <link rel="stylesheet" href="style.css">
+
+     <style type="text/css">
+          body {
+               margin-top: 0px;
+               margin-right: 0px;
+               margin-bottom: 0px;
+               margin-left: 0px
+          }
+     </style>
+
+</head>
+
+<body>   
+
+     <div id="container">
+          <div class="title"><h1>Etch-a-Sketch</h1></div>
+          <h2>Each click on the board activates/deactivates drawing mode!</h2>
+          <div class="content">
+               <div class="board"></div>
+               <div class="buttons">
+                    <button onclick="changeColor('black')">Black</button>
+                    <button onclick="changeColor('red')">Red</button>
+                    <button onclick="changeColor('blue')">Blue</button>
+                    <button onclick="changeColor('yellow')">Yellow</button>
+                    <button onclick="changeColor('random')">Random</button>
+                    <button onclick="changeColor('white')">Eraser</button>
+                    <button id="boardReset">RESET BOARD</button>
+                    <button id="setSize">SELECT BOARD SIZE</button>
+               </div>
+          </div>
+
+     </div>
+
+<script src="script.js"></script>
+</body>
+</html>

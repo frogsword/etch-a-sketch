@@ -1,0 +1,21 @@
+body {
+     background-color: aquamarine;
+}
+
+#container {
+     text-align: center;
+}
+
+.board {
+     width: 512px;
+     height: 512px;
+     border: 1px solid black;
+     background-color: white;
+     margin: 10% 10% 10% 10%;
+     display: grid;
+     margin: auto;
+}
+
+.buttons {
+     margin-top: 50px;
+}
