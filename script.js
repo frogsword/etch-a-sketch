@@ -1,6 +1,7 @@
 const resetButton = document.querySelector('#boardReset');
 const sizeButton = document.querySelector('#setSize');
 const boardContainer = document.querySelector('.board');
+const modeText = document.querySelector('.mode');
 let color = 'black';
 let click = false;
 
@@ -58,4 +59,9 @@ function changeColor(choice) {
 
 document.querySelector('.board').addEventListener('click', () => {
      click = !click;
+     if(click) {
+          modeText.textContent = 'Drawing'
+     } else {
+          modeText.textContent = 'Not Drawing'
+     }
 })
