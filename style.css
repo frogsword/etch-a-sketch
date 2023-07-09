@@ -22,11 +22,12 @@ body {
 
 .form-range {
      padding-top: 10px;
-     width: 30%;
+     width: 25%;
 }
 
 .form-label {
-     font-size: 18px;
+     font-size: 22px;
+     font-weight: 700;
 }
 
 .slider-container {

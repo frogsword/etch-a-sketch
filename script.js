@@ -1,6 +1,5 @@
 const body = document.body;
 const resetButton = document.querySelector('#boardReset');
-const sizeButton = document.querySelector('#setSize');
 const sizeSlider = document.querySelector('.form-range');
 const sliderLabel = document.querySelector('.form-label');
 const boardContainer = document.querySelector('.board');
@@ -44,13 +43,6 @@ function populateBoard(size) {
      }
 }
 populateBoard(64);
-
-// sizeButton.onclick = () => {
-//      let size = prompt('Enter board width between 2 and 100');
-//      resetBoard();
-//      populateBoard(size);
-// }
-
 
 function resetBoard() {
      let cell = document.querySelectorAll('.cell');
