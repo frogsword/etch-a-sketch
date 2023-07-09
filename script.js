@@ -1,12 +1,17 @@
 const body = document.body;
 const resetButton = document.querySelector('#boardReset');
 const sizeButton = document.querySelector('#setSize');
+const sizeSlider = document.querySelector('.form-range');
+const sliderLabel = document.querySelector('.form-label');
 const boardContainer = document.querySelector('.board');
 const modeText = document.querySelector('.mode');
 let color = 'black';
 let click = false;
 
 function populateBoard(size) {
+     sliderLabel.textContent = `Current Board Size: ${size}x${size}    `;
+     resetBoard();
+
      let board = document.querySelector('.board');
           board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
           board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
@@ -40,11 +45,12 @@ function populateBoard(size) {
 }
 populateBoard(64);
 
-sizeButton.onclick = () => {
-     let size = prompt('Enter board width between 2 and 100');
-     resetBoard();
-     populateBoard(size);
-}
+// sizeButton.onclick = () => {
+//      let size = prompt('Enter board width between 2 and 100');
+//      resetBoard();
+//      populateBoard(size);
+// }
+
 
 function resetBoard() {
      let cell = document.querySelectorAll('.cell');

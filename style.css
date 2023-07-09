@@ -17,5 +17,31 @@ body {
 }
 
 .buttons {
-     margin-top: 50px;
+     margin-top: 20px;
+}
+
+.form-range {
+     padding-top: 10px;
+     width: 30%;
+}
+
+.form-label {
+     font-size: 18px;
+}
+
+.slider-container {
+     margin-top: 20px;
+}
+
+#colorpicker {
+     appearance: none;
+     -moz-appearance: none;
+     -webkit-appearance: none;
+     background: none;
+     border: 1px solid black;
+     cursor: pointer;
+     height: 3em;
+     padding: 0;
+     margin-top: 20px;
+     width: 3em;
 }

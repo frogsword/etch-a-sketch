@@ -6,7 +6,9 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>Etch-a-Sketch</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
      <link rel="stylesheet" href="style.css">
+
 
      <style type="text/css">
           body {
@@ -27,16 +29,18 @@
           <h2 class="mode">Not Drawing</h2>
           <div class="content">
                <div class="board"></div>
+               <input onclick='changeColor(value)' onchange='changeColor(value)' type="color" id="colorpicker" value="#000000">
                <div class="buttons">
-                    <button onclick="changeColor('black')">Black</button>
-                    <button onclick="changeColor('red')">Red</button>
-                    <button onclick="changeColor('blue')">Blue</button>
-                    <button onclick="changeColor('yellow')">Yellow</button>
-                    <button onclick="changeColor('random')">Random</button>
-                    <button onclick="changeColor('white')">Eraser</button>
-                    <button id="boardReset">RESET BOARD</button>
-                    <button id="setSize">SELECT BOARD SIZE</button>
+ 
+                    <button onclick="changeColor('random')" type="button" class="btn btn-dark">Random</button>
+                    <button onclick="changeColor('white')" type="button" class="btn btn-light">Eraser</button>
+                    <button id="boardReset" type="button" class="btn btn-secondary">RESET BOARD</button>
                </div>
+           
+                    <div class="slider-container">
+                         <label for="customRange2" class="form-label">Change Board Size</label>
+                         <input onchange='populateBoard(value)' type="range" class="form-range" min="2" max="100" id="customRange2" value=64>
+                    </div>
           </div>
 
      </div>
