@@ -36,25 +36,33 @@
                <div class="board"></div>
 
                <div class="color-container">
-                    <input onchange='changePenColor(value)' type="color" id="colorpicker" class="penColorPicker"
-                    value="#000000">
-                    <label for="colorpicker">PEN COLOR</label>
+                    <div class="pen-color-container">
+                         <input onchange='changePenColor(value)' type="color" id="colorpicker" class="penColorPicker"
+                              value="#000000">
+                         <label for="colorpicker">PEN COLOR</label>
+                    </div>
 
-                    <input onchange='changeBoardColor(value)' type="color" id="colorpicker" class="boardColorPicker"
-                    value="#FFFFFF">
-                    <label for="colorpicker">BOARD COLOR</label>
+                    <div class="board-color-container">
+                         <input onchange='changeBoardColor(value)' type="color" id="colorpicker"
+                              class="boardColorPicker" 
+                              value="#FFFFFF">
+                         <label for="colorpicker">BOARD COLOR</label>
+                    </div>
                </div>
 
                <div class="buttons">
                     <button onclick="changePenColor('random')" type="button" class="btn btn-dark">RANDOM</button>
+
                     <button onclick="changePenColor()" type="button" class="btn btn-light" id="eraser">ERASER</button>
-                    <button onclick='resetBoard()' id="boardReset" type="button" class="btn btn-secondary">RESET BOARD</button>
+
+                    <button onclick='resetBoard()' id="boardReset" type="button" class="btn btn-secondary">RESET
+                         BOARD</button>
                </div>
 
                <div class="slider-container">
-                    <label for="customRange2" class="form-label">Change Board Size</label>
                     <input onchange='populateBoard(value)' type="range" class="form-range" min="2" max="100"
                          id="customRange2" value=64>
+                    <label for="customRange2" class="form-label">Change Board Size</label>
                </div>
           </div>
 

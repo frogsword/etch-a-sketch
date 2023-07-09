@@ -19,6 +19,18 @@ body {
 /* color pickers */
 .color-container {
      display: flex;
+     justify-content: center;
+     gap: 200px;
+}
+
+.board-color-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.pen-color-container {
+     display: flex;
      flex-direction: column;
      align-items: center;
 }
@@ -61,15 +73,19 @@ label {
 /* size slider */
 .form-range {
      padding-top: 10px;
-     width: 25%;
+     width: 30%;
 }
 
 .form-label {
      font-size: 22px;
      font-weight: 700;
+     padding-top: 10px;
 }
 
 .slider-container {
      margin-top: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
 }
 
