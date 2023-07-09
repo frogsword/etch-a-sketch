@@ -1,10 +1,9 @@
 const body = document.body;
-const resetButton = document.querySelector('#boardReset');
+const eraserButton = document.querySelector('#eraser');
 const sizeSlider = document.querySelector('.form-range');
 const sliderLabel = document.querySelector('.form-label');
 const boardContainer = document.querySelector('.board');
 const modeText = document.querySelector('.mode');
-let color = 'black';
 let click = false;
 
 function populateBoard(size) {
@@ -45,15 +44,32 @@ function populateBoard(size) {
 populateBoard(64);
 
 function resetBoard() {
+     const boardColorPicker = document.querySelector('.boardColorPicker');
+     const penColorPicker = document.querySelector('.penColorPicker');
      let cell = document.querySelectorAll('.cell');
-     for (let j = 0; j < cell.length; j++) {
-          cell[j].style.backgroundColor = 'white';
-     }
-}
-resetButton.onclick = () => resetBoard();
 
-function changeColor(choice) {
+     for (let j = 0; j < cell.length; j++) {
+          cell[j].style.backgroundColor = '';
+     }
+
+     changeBoardColor('#FFFFFF');
+     changePenColor('#000000');
+
+     // penColorPicker.style.backgroundColor = 'none';
+     // boardColorPicker.style.backgroundColor = 'none';
+     penColorPicker.setAttribute('value', '#000000');
+}
+
+eraserButton.addEventListener('click', () => {
+     changePenColor(boardContainer.style.backgroundColor);
+})
+
+function changePenColor(choice) {
      color = choice;
+}
+
+function changeBoardColor(choice) {
+     boardContainer.style.backgroundColor = choice;
 }
 
 document.querySelector('.board').addEventListener('click', () => {
